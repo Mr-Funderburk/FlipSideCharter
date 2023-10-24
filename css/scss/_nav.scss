@@ -1,0 +1,192 @@
+.navContainer {
+    overflow: hidden;
+    position: relative;
+    z-index: 5;
+
+    #navCheck { display: none; }
+    #navCheck:not(:checked) ~ nav { max-height: 0px; }
+    #navCheck:checked { 
+        &~ nav { max-height: 90vh; }
+        &~ .hamburger .line1 { transform: rotate(45deg); }
+        &~ .hamburger .line2 { transform: scaleY(0); }
+        &~ .hamburger .line3 { transform: rotate(-45deg); }
+    }
+    .hamburger {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        transition: top 0.5s ease-in-out;
+
+        label {
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 32px;
+            height: 26px;
+
+            span {
+                display: block;
+                width: 100%;
+                height: 4px;
+                border-radius: 10px;
+                background: $colors_teal;
+
+                &.line1 {
+                    transform-origin: 0% 0%;
+                    transition: transform 0.4s ease-in-out;
+                }
+
+                &.line2 {
+                    transition: transform 0.2s ease-in-out;
+                }
+
+                &.line3 {
+                    transform-origin: 0% 100%;
+                    transition: transform 0.4s ease-in-out;
+                }
+            }
+
+            &:hover span, &:focus span {
+                border-color: lighten($colors_teal, 35);
+            }
+        }
+    }
+
+    nav {
+        background: #FFF;
+        transition: max-height 1s;
+        padding-top: 25px;
+        overflow: hidden;
+        
+
+        ul { list-style-type: none; }
+        a:link, a:visited {
+            display: block;
+            padding: 8px 12px;
+            text-decoration: none;
+            font-size: 1rem;
+            font-family: $fonts_sans;
+            font-weight: 300;
+            color: #000;
+            border-bottom: 1px solid $colors_teal;
+            margin: 0 70px 0 90px;
+            text-align: center;
+        }
+        a:hover, a:focus {
+            background: $colors_teal;
+            color: #FFF;
+        }
+
+        li:last-child a { border: none; }
+        
+        a:active {
+            background: $colors_teal;
+            color: #FFF;
+        }
+
+        img {
+            width: 60px;
+            display: block;
+            position: absolute;
+            top: 15px;
+            left: 5px;
+        }
+    }
+
+    .navWave { 
+        width: 100%;
+        height: 125px;
+        overflow: hidden;
+        position: relative;
+        z-index: -1;
+    }
+
+    .socials { display: none; }
+}
+
+
+
+@media (min-width: 800px) {
+
+    .navContainer {
+        #navCheck:not(:checked) ~ nav,
+        #navCheck:checked ~ nav { max-height: 100%; }
+
+        .hamburger { top: -50px; }
+        nav {
+
+            display: flex;
+            justify-content: center;
+            padding-top: 16px;
+            position: relative;
+
+            li { float: left; }
+
+            a:link, a:visited {
+                display: block;
+                font-size: 1.1rem;
+                border-bottom: none;
+                background: none;
+                padding: 22px;
+                padding-bottom: 12px;
+                margin: 0;
+            }
+
+            a:hover, a:focus, 
+            li:last-child a:hover, li:last-child a:focus {
+                color: $colors_teal;
+                border-bottom: 4px solid $colors_teal;
+            }
+
+            img { 
+                width: 80px; 
+                margin: 0 12px;
+                position: relative;
+                top: 0;
+                left: 0; 
+            }
+
+        }
+
+        .navWave { height: 200px; }
+
+        .socials {
+            display: block;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .socials a {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin: 0 3px;
+        }
+        .socials svg { fill: $colors_teal; }
+        .socials svg.facebook:hover { fill: #1877F2; }
+        .socials svg.instagram:hover { fill: #E4405F; }
+        .socials svg.twitter:hover { fill: #1D9BF0; }
+        .socials svg.tiktok:hover { fill: #000; }
+        
+    }
+    
+}
+
+
+@media (min-width: 1000px) {
+    
+    .navContainer {
+        nav a:link, .navContainer nav a:visited { font-size: 1.2rem; }
+
+        .socials a {
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            margin: 0 3px;
+        }
+
+    }
+
+}

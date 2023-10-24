@@ -1,0 +1,23 @@
+// SCSS/CSS, HTML, and JavaScript created by Stephen Funderburk (https://github.com/Mr-Funderburk)
+//   except where explicitly stated.
+// Copyright Flip Side Charters.
+
+
+
+// site variables
+$colors_teal: #3BBFAD;
+$colors_darkblue: #0D4881;
+$fonts_sans: "Open Sans", Verdana, Arial, sans-serif;
+$fonts_script: Waterfall, cursive;
+$fonts_serif: "EB Garamond", "Garamond", "Baskerville Old Face", "Book Antiqua", serif;
+
+// Poor Man's Reset
+* { margin: 0; padding: 0; outline: none; box-sizing: border-box; }
+html { font-size: 100%; }
+
+// imports
+@import "nav";
+@import "header";
+@import "main";
+@import "footer";
+

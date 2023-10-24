@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Flip Side Eco Charters | Premier Boat Charters in Cape Coral, FL</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400&family=Open+Sans:wght@400;700&family=Waterfall&family=EB+Garamond:wght@400&display=swap" rel="stylesheet">
+
+    <style>
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { font-size: 100%; }
+
+        header {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            padding-top: 16px;
+            position: relative;
+            background: #FFF;
+        }
+
+        nav ul { list-style-type: none; }
+        nav li {
+            float: left;
+            margin: 0;
+        }
+        nav a:link, nav a:visited {
+            display: block;
+            padding: 22px 22px;
+            padding-bottom: 12px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-family: Raleway, sans-serif;
+            font-weight: 400;
+            color: #000;
+        }
+        nav a:hover, nav a:focus {
+            border-bottom: 4px solid #3BBFAD;
+            color: #3BBFAD;
+        }
+        nav li img {
+            width: 80px;
+            margin: 0 12px;
+        }
+
+        nav .navWave {
+            height: 200px;
+            width: 100%;
+            overflow: hidden;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            z-index: -1;
+        }
+
+        .socials {
+            position: absolute;
+            top: 40px;
+            right: 25px;
+        }
+        .socials a {
+            display: inline-block;
+            width:  25px;
+            height: 25px;
+            margin: 0 3px;
+        }
+        .socials svg { fill: #3BBFAD; }
+        .socials svg.facebook:hover { fill: #1877F2; }
+        .socials svg.instagram:hover { fill: #E4405F; }
+        .socials svg.twitter:hover { fill: #1D9BF0; }
+        .socials svg.tiktok:hover { fill: #000; }
+
+
+
+        h6.brand {
+            font-family: "EB Garamond", serif;
+            font-size: 4rem;
+            font-weight: 400;
+            font-variant: small-caps;
+            letter-spacing: 0.15rem;
+            color: #0D4881;
+            position: absolute;
+            bottom: 50px;
+            right: 50px;
+            text-shadow: 1px 1px 2px #333;
+        }
+
+        h6.brand span.welcome {
+            font-family: Waterfall, cursive;
+            font-size: 8rem;
+            font-variant: normal;
+            position: absolute;
+            top: -115px;
+            left: 80px;
+            color: #3BBFAD;
+        }
+
+        h6.brand span.eco {
+            display: inline-block;
+            font-size: 2rem;
+            transform: rotate(-90deg);
+            -webkit-transform: rotate(-90deg);
+            -moz-transform: rotate(-90deg);
+            -ms-transform: rotate(-90deg);
+            -o-transform: rotate(-90deg);
+            filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+            position: relative;
+            top: -10px;
+            left: 25px;
+        }
+
+        h6.brand img {
+            width: 100px;
+            position: relative;
+            top: 20px;
+            left: 15px;
+        }
+
+
+
+        
+        #headerVid {
+            object-fit: cover;
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -5;
+        }
+
+
+        .headerCaption {
+            position: absolute; 
+            bottom: 30%;
+            left: 0;
+            width: 30%;
+            background-color: rgba(255,255,255,0.3);
+            color: #000;
+            padding: 30px;
+            padding-left: 60px;
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+            font-family: "Open Sans", sans-serif;
+        }
+        .headerCaption h1 {
+            font-weight: 400;
+            font-size: 1.2rem;
+        }
+
+        .button:link, .button:visited {
+            display: inline-block;
+            padding: 12px 30px;
+            font-family: "Open Sans", sans-serif;
+            font-size: 1rem;
+            background-color: #3BBFAD;
+            color: #FFF;
+            text-decoration: none;
+            border-radius: 5px;
+            letter-spacing: 0.05rem;
+        }
+
+        .button:hover, .button:focus {
+            background-color: hsl(171.69,51.18%,60%);
+        }
+
+
+        .headerBottomWave {
+            height: 200px;
+            width: 100%;
+            overflow: hidden;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+
+        .left  { float: left;}
+        .right { float: right; }
+        .clear { clear: both; }
+
+
+        main {
+            background: #FFF;
+        }
+
+
+
+
+        h2 {
+            font-size: 3rem;
+            font-family: "EB Garamond", serif;
+            text-align: center;
+            padding: 4px;
+            margin: 0 10%;
+            margin-bottom: 30px;
+            border-top: 1px solid #3BBFAD;
+            border-bottom: 1px solid #3BBFAD;
+            color: #0D4881;
+        }
+
+        p {
+            padding: 8px 50px;
+            line-height: 1.3rem;
+            font-size: 1rem;
+            font-family: "Open Sans", sans-serif;
+        }
+
+        .stress {
+            font-size: 1.2em;
+            font-weight: 700;
+            line-height: 1.4em;
+        }
+
+        aside {
+            width: 30%;
+            float: right;
+            margin: 0 24px;
+            padding: 24px 0;
+            background: hsl(0,0%,90%);
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        aside.quote:before {
+            content: '"';
+            font-size: 400px;
+            color: #FFF;
+            display: block;
+            position: absolute;
+            top: -170px;
+            left: 0;
+            font-family: Waterfall, cursive;
+        }
+
+        aside p { position: relative; z-index: 5; }
+        .lightText { color: hsl(0,0%,45%); }
+        .fullWidthImage { width: 100%; }
+
+        section { text-align: center; }
+        section p { text-align: left; }
+
+
+        .left40 {
+            float: left;
+            width: 40%;
+        }
+
+        .right60 {
+            float: right;
+            width: 60%;
+        }
+
+
+
+
+
+        footer {
+            width: 100%;
+            overflow: hidden;
+            background: #FFF;
+        }
+        .footerContent {
+            background: rgb(45,131,166);
+        }
+
+        .waves {
+            position: relative;
+            width: 100%;
+            height: 15vh;
+            margin-bottom: -7px; /*Fix for safari gap*/
+            min-height: 100px;
+            max-height: 150px;
+        }
+        /* Animation */
+
+        .parallax > use {
+            animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+        }
+        .parallax > use:nth-child(1) {
+            animation-delay: -2s;
+            animation-duration: 7s;
+        }
+        .parallax > use:nth-child(2) {
+            animation-delay: -3s;
+            animation-duration: 10s;
+        }
+        .parallax > use:nth-child(3) {
+            animation-delay: -4s;
+            animation-duration: 13s;
+        }
+        .parallax > use:nth-child(4) {
+            animation-delay: -5s;
+            animation-duration: 20s;
+        }
+        @keyframes move-forever {
+            0%   { transform: translate3d(-90px,0,0); }
+            100% { transform: translate3d(85px,0,0); }
+        }
+        /*Shrinking for mobile*/
+        @media (max-width: 768px) {
+            .waves {
+                height:40px;
+                min-height:40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><img src="img/FlipSide-Charters-Logo.png" alt="Flip Side Eco Charters Logo"></li>
+                <li><a href="#">Booking</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+            <div class="navWave">
+                <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                    <path d="M0.00,49.98 C149.99,150.00 271.49,-49.98 500.00,49.98 L500.00,0.00 L0.00,0.00 Z" style="stroke: none; fill: #FFF;"></path>
+                </svg>
+            </div>
+        </nav>
+
+        <div class="socials">
+            <a href="#"><svg class="facebook" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Flip Side Charters on Facebook</title><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+            
+            <a href="#"><svg class="instagram" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Flip Side Charters on Instagram</title><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg></a>
+            
+            <a href="#"><svg class="twitter" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Flip Side Charters on Twitter</title><path d="M21.543 7.104c.015.211.015.423.015.636 0 6.507-4.954 14.01-14.01 14.01v-.003A13.94 13.94 0 0 1 0 19.539a9.88 9.88 0 0 0 7.287-2.041 4.93 4.93 0 0 1-4.6-3.42 4.916 4.916 0 0 0 2.223-.084A4.926 4.926 0 0 1 .96 9.167v-.062a4.887 4.887 0 0 0 2.235.616A4.928 4.928 0 0 1 1.67 3.148 13.98 13.98 0 0 0 11.82 8.292a4.929 4.929 0 0 1 8.39-4.49 9.868 9.868 0 0 0 3.128-1.196 4.941 4.941 0 0 1-2.165 2.724A9.828 9.828 0 0 0 24 4.555a10.019 10.019 0 0 1-2.457 2.549z"/></svg></a>
+
+            <a href="#"><svg class="tiktok" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Flip Side Charters on TikTok</title><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+        </div>
+
+        <video playsinline autoplay loop muted poster="img/sanibel-island.png" id="headerVid">
+            <source src="vid/boat_at_sea_STOCK.mp4" type="video/mp4">
+        </video>
+
+        <div class="headerCaption">
+            <h1>Come and explore the beautiful waters of the Gulf of Mexico and Pine Island Sound!</h1>
+            <p>&nbsp;</p>
+            <a href="#" class="button right">Book An Appointment</a>
+        </div>
+
+        <div class="headerBottomWave">
+            <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #FFF;"></path>
+            </svg>
+        </div>
+
+        <h6 class="brand"><span class="welcome">Welcome To</span>Flip Side <img src="img/FlipSide-Charters-Logo.png" alt="Flip Side Eco Charters Logo"> <span class="eco">Eco</span> Charters</h6>
+    </header>
+
+    <main>
+
+        <div style="height: 60px;"></div>
+
+        <div class="homeSection">
+
+            <section class="sectionText">
+
+                <h2>Make Memories That Last Forever</h2>
+
+                <aside class="quote">
+                    <p class="stress">We are blessed with a wonderful area that is unrivaled in possibilities to connect with the ocean and nature. Our specialty is a fun and educational experience.</p>
+                </aside>
+
+                <p class="lightText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse iaculis, nibh quis fermentum sagittis, mauris risus tempus augue, nec elementum orci turpis quis arcu. Aenean bibendum diam sodales hendrerit mollis. Cras fermentum mi in venenatis pretium. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse varius, ipsum pulvinar elementum rhoncus, neque metus elementum odio, vel auctor tellus mi ut nibh. Donec arcu eros, consequat rutrum venenatis vitae, rutrum at ante. Donec sit amet odio cursus, bibendum mauris in, tincidunt leo. Suspendisse non imperdiet dui. Quisque at quam mattis ligula varius congue vitae vel augue. Suspendisse congue nisi augue, et mollis nisl mollis et. Donec ante diam, aliquam quis metus et, volutpat iaculis ligula. Pellentesque arcu neque, placerat at lacus ac, euismod viverra sapien. Praesent enim lacus, mollis non justo et, blandit viverra mauris. Donec convallis nisl nunc, vel porta elit gravida eget. Phasellus lacinia erat nibh.</p>
+
+                <p>&nbsp;</p>
+
+            </section>
+
+            <img class="fullWidthImage" src="img/sanibel-island.png" alt="Arial image of Sanibel Island">
+
+            <section>
+                
+                <div class="sectionText left40">
+
+                    <h2>Adventure</h2>
+
+                    <p class="lightText">Join us for shelling, snorkeling and a day of fun!</p>
+    
+                    <p>&nbsp;</p>
+    
+                    <a href="#" class="button">Book An Appointment</a>
+    
+                    <p>&nbsp;</p>
+
+                </div>
+
+                <div class="sectionImage right60">
+                    <img src="img/adventure.png" alt="Image of young family on an adventure enjoying the boat charter">
+                </div>
+                
+            </section>
+        </div>
+
+        <br class="clear">
+
+    </main>
+
+    <footer>
+        <!--Waves Container :: created by Goodkatz :: https://codepen.io/goodkatz/pen/LYPGxQz-->
+        <div>
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(45,131,166,0.7" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(45,131,166,0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(45,131,166,0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(45,131,166,1)" />
+                </g>
+            </svg>
+        </div>
+        <!--Waves end-->
+
+        <div class="footerContent">
+            asdf
+        </div>
+    </footer>
+
+</body>
+</html>

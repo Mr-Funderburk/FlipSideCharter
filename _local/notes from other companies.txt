@@ -1,0 +1,38 @@
+**Need each page Unique Title & Use most Important keywords
+**For Internal Pages start your title tags with your most important keywords.
+**Ensure that each of your web pages have a unique, straightforward meta description that contains the most important keywords. These keywords are especially important because they appear in bold when they match the user’s search query (See the Google Preview below).
+Example:
+https://static.wixstatic.com/media/3283a0_0f689e128d394617ab49d38665b002c9~mv2.png/v1/fill/w_114,h_91,al_c,q_85,usm_1.20_1.00_0.01,enc_auto/FS%20logo%20-%2012-20-22.png
+https://static.wixstatic.com/media/3283a0_2a9dfcc2feea4ff2a114f02d18797dee~mv2.jpg/v1/fill/w_89,h_87,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_auto/3283a0_2a9dfcc2feea4ff2a114f02d18797dee~mv2.jpg
+*** Not Good
+H1
+H2
+H3
+H4
+H5
+0
+6
+0
+0
+0
+EX:
+**Make the most important buttons/links large enough to be tapped easily.
+**Page Found but is not design according to SEO.
+**Your website does not have a custom 404 Error Page.
+**Your server responded with the HTTP status code: 404
+**Use a custom 404 page to reduce customer frustration and link to other pages on your site. Make sure it returns the 404 http status code.
+** Mobile or responsive frameworks are an important part of website optimization as they assist developers in creating applications which are applicable to multiple devices.
+** Mobile speed 48/100
+** Desktop speed 60/100
+**Site speed is an important factor for ranking in Google search results. Load time affects not only visitor engagement, retention, and conversion rates, but it can also affect your rankings.
+**Your website is too slow and it is likely impacting your search rankings and user experience.
+**High load times can be caused by a number of things, including pages with poor code optimization (cache, Mysql queries, etc.), server problems, network problems, or third-party issues (advertising codes, analytics codes, etc.).
+**Site speed is an important factor for ranking high in Google search results.
+**W3Cis a consortium that sets web standards.
+**No Structured Data Markup has been detected
+**https://www.semrush.com/analytics/overview/?q=https%3A%2F%2Fwww.flipsidecharter.com%2F&protocol=https&searchType=domain
+https://twitter.com/flipsidecharter/
+**Need attractive Twitter cover picture
+**Need more followers (Only 1 followers)
+**Need more tweets use #tag
+**Need more re tweets
