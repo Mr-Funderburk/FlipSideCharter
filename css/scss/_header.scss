@@ -4,6 +4,12 @@ header {
     overflow: hidden;
     position: relative;
 
+    &.notIndex {
+        position: absolute;
+        top: 0; left: 0;
+        height: auto;
+    }
+
     .headerCaption {
         position: absolute; 
         top: 0;
