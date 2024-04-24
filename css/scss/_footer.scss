@@ -1,6 +1,16 @@
 footer {
     background: #FFF;
     margin: 0;
+
+    a:link, a:visited {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    a:hover, a:focus {
+        color: $colors_teal;
+    }
     
     .footerContent {
         color: #FFF;
