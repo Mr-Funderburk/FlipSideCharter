@@ -71,14 +71,14 @@
         <h1>Flip Side Gallery</h1>
 
         <div class="gallery">
-<!--
+
             <a href="javascript:void(0)" class="image" data-desc="First Mate Aude" data-src="aude.png"><img src="img/gallery/aude.png" alt="gallery image" title="Gallery Image"></a>
             <a href="javascript:void(0)" class="image" data-desc="Adventure Awaits!" data-src="adventure.png"><img src="img/gallery/adventure.png" alt="gallery image" title="Gallery Image"></a>
             <a href="javascript:void(0)" class="image" data-desc="" data-src="boat.png"><img src="img/gallery/boat.png" alt="gallery image" title="Gallery Image"></a>
             <a href="javascript:void(0)" class="image" data-desc="Captain Jenni" data-src="captain_jenni.png"><img src="img/gallery/captain_jenni.png" alt="gallery image" title="Gallery Image"></a>
             <a href="javascript:void(0)" class="image" data-desc="Experience Matters!" data-src="experience.png"><img src="img/gallery/experience.png" alt="gallery image" title="Gallery Image"></a>
             <a href="javascript:void(0)" class="image" data-desc="" data-src="waters.png"><img src="img/gallery/waters.png" alt="gallery image" title="Gallery Image"></a>
--->
+
         </div>
 
     </main>
@@ -164,19 +164,6 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"></script>
     <script>
         $(function(){
-            var folder = "img/gallery/";
-            $.ajax({
-                url : folder,
-                success: function(data) {
-                    $(data).find("a").attr("href", function (i, val) {
-                        if (val.match(/\.(jpe?g|png|gif)$/)) {
-                            $(".gallery").append("<img src='"+ folder + val +"'>");
-                            console.log(val);
-                        }
-                    });
-                }
-            });
-
             $(".image").click(function(){
                 $("body").addClass("modalOpen");
                 $("#modalContainer").removeClass("hide");
