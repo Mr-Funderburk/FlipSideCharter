@@ -17,7 +17,7 @@ main {
 
                 > p { 
                     font-size: 1rem; 
-                    color: #505050; 
+                    color: $colors_darkblue; 
                     padding: 10px 15px; 
                     margin: 0;
                 }
@@ -54,6 +54,7 @@ p {
     line-height: 1.3rem;
     font-size: 1rem;
     font-family: $fonts_sans;
+    color: $colors_darkblue;
 }
 
 blockquote {
@@ -163,7 +164,7 @@ blockquote {
                     background: linear-gradient(90deg, rgba(255,255,255,0.75) 0%, rgba(255,255,255,0.75) 90%, rgba(255,255,255,0) 100%);
                     min-height: 400px;
 
-                    > p { font-size: 1rem; color: #505050; padding: 40px 15px; margin: 0; }
+                    > p { font-size: 1rem; padding: 40px 15px; margin: 0; }
                 }
                 .moveRight { 
                     margin-left: 60%;
