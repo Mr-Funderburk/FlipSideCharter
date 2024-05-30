@@ -141,6 +141,24 @@ blockquote {
     color: $colors_darkblue;
 }
 
+.waterlust {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    div img { display: block; width: 70%; margin: 0 auto; }
+
+    a:link, a:visited, a:active {
+        font-family: $fonts_sans;
+        text-decoration: none;
+        color: $colors_teal;
+        font-weight: 700;
+        transition: color 0.2s ease-in-out;
+    }
+
+    a:hover, a:focus { color: $colors_darkblue; }
+}
+
 
 @media (min-width: 800px) {
 
@@ -184,6 +202,15 @@ blockquote {
             }
         }
 
+    }
+
+    .waterlust {
+        flex-direction: row;
+        align-items: center;
+    
+        div:first-child { width: 25%; }
+        div:last-child { width: 75%; }
+        div img { display: block; width: 70%; margin: 0 auto; }
     }
 
 }

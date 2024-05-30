@@ -402,6 +402,23 @@ blockquote {
   background-color: #9ae0d6;
   color: #0D4881; }
 
+.waterlust {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; }
+  .waterlust div img {
+    display: block;
+    width: 70%;
+    margin: 0 auto; }
+  .waterlust a:link, .waterlust a:visited, .waterlust a:active {
+    font-family: "Open Sans", Verdana, Arial, sans-serif;
+    text-decoration: none;
+    color: #3BBFAD;
+    font-weight: 700;
+    transition: color 0.2s ease-in-out; }
+  .waterlust a:hover, .waterlust a:focus {
+    color: #0D4881; }
+
 @media (min-width: 800px) {
   main.notIndex {
     margin-top: 200px; }
@@ -435,7 +452,19 @@ blockquote {
       height: 100%;
       z-index: 2;
       background-position: center top;
-      background-size: cover; } }
+      background-size: cover; }
+
+  .waterlust {
+    flex-direction: row;
+    align-items: center; }
+    .waterlust div:first-child {
+      width: 25%; }
+    .waterlust div:last-child {
+      width: 75%; }
+    .waterlust div img {
+      display: block;
+      width: 70%;
+      margin: 0 auto; } }
 @media (min-width: 1000px) {
   .reviewsContainer {
     display: flex; }
